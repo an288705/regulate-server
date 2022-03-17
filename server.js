@@ -15,15 +15,15 @@ app.use(cookieParser());
 app.use(cors());
 
 //import routes
-const { collection, getDocs } = require("firebase/firestore");
-async function hi(){
-    const querySnapshot = await getDocs(collection(db, "users"));
-    querySnapshot.forEach((doc) => {
-    console.log(`${doc.id} => ${doc.data()}`);
-    });
-}
-hi();
+// const { collection, getDocs } = require("firebase/firestore");
+// async function hi(){
+//     const querySnapshot = await getDocs(collection(db, "users"));
+//     querySnapshot.forEach((doc) => {
+//     console.log(`${doc.id} => ${doc.data()}`);
+//     });
+// }
+// hi();
 
-// app.listen(PORT,()=>{
-//     console.log('listening on '+PORT);
-// });
+app.listen(PORT,()=>{
+    console.log('listening on '+PORT);
+});
